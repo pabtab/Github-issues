@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import { Search } from './Molecules/Search';
+import Home from './Pages/Home/Home';
 
 const App = () => {
   return (
     <div className="App">
-      <Search />
+      <Home />
     </div>
   );
 };
