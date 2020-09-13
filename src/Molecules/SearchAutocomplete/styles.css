@@ -1,0 +1,11 @@
+.ui.search.search--autocomplete > .results {
+  max-height: 400px;
+  overflow-y: scroll;
+  margin: 0 auto;
+  width: 260px;
+  position: initial;
+}
+
+.ui.input {
+  width: 260px;
+}

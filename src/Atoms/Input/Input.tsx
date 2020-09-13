@@ -1,12 +1,16 @@
-import React from 'react'
-import { Input as InputSemantic } from 'semantic-ui-react'
+import React from 'react';
+import { Input as InputSemantic } from 'semantic-ui-react';
 
-const Input = () => {
-  return (
-    <div>
-      <InputSemantic />
-    </div>
-  )
+type props = {
+  onChange: React.FormEventHandler<HTMLInputElement>
 }
 
-export default Input
+const Input = ({ onChange }: props) => {
+  return (
+    <div>
+      <InputSemantic onChange={onChange} />
+    </div>
+  );
+};
+
+export default Input;

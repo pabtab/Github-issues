@@ -1,0 +1,8 @@
+.Home {
+  padding: 40px 0;
+  height: inherit;
+}
+
+.Home > .box {
+  height: 100%;
+}
