@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
 import { Search } from 'semantic-ui-react';
-import { Input } from '../../Atoms/Input';
+
+import { ListItem } from '../ListItem';
+
 import './styles.css';
 
 type SearchProps = {
   results: Array<Object>;
-  handleSearchChange: any
-  selectResult: any,
-  value: string
+  handleSearchChange: any;
+  selectResult: any;
+  value: string;
 };
 
-const SearchAutocomplete = ({ results, handleSearchChange, selectResult, value }: SearchProps) => {
+const SearchAutocomplete = ({
+  results,
+  handleSearchChange,
+  selectResult,
+  value,
+}: SearchProps) => {
+
+  const renderItem = ({title}) => <ListItem  />
+
   return (
     <Search
       className="search--autocomplete"
@@ -18,6 +28,7 @@ const SearchAutocomplete = ({ results, handleSearchChange, selectResult, value }
       onSearchChange={handleSearchChange}
       results={results}
       value={value}
+      resultRenderer={renderItem}
     />
   );
 };

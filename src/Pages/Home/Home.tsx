@@ -8,11 +8,14 @@ import { SearchAutocomplete } from '../../Molecules/SearchAutocomplete';
 
 import './styles.css';
 
+interface IResult {
+  result: Object
+}
+
 const Home = () => {
   const dispatch = useDispatch();
   const { value, result } = useSelector(getResult);
   const results = useSelector(getIssues);
-  console.log(results);
 
   useEffect(() => {
     dispatch(fetchIssues());
@@ -27,10 +30,9 @@ const Home = () => {
 
   const selectResult = (
     e: React.FormEventHandler<HTMLInputElement>,
-    data: Object
+    data: IResult
   ) => {
-    console.log(data);
-    //dispatch(selectResultItem(data))
+    dispatch(selectResultItem(data.result))
   };
 
   return (
