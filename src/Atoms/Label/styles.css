@@ -1,4 +1,10 @@
 .Label {
   color: white;
   padding: 8px;
+  margin: 0 10px;
+  border-radius: 20px;
+}
+
+.Label:first-child {
+  margin-left: 0;
 }

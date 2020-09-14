@@ -1,17 +1,18 @@
 import React from 'react';
 import { Label } from '../../Atoms/Label';
+import { Item } from '../../types/types';
 
-type ListItemProps = {
-  title: String
-  color: String
-  label: String
-}
-
-const ListItem = ({ title, color, label }: ListItemProps) => {
+const ListItem = ({ title, labels, id }: Item) => {
   return (
-    <div>
+    <div key={id.toString()} className="Item">
       <h3>{title}</h3>
-      <Label color={color}>{label}</Label>
+      <span className="labels">
+        {
+          labels.map(label => (
+            <Label key={label.id} color={label.color}>{label.name}</Label>
+          ))
+        }
+      </span>
     </div>
   );
 };

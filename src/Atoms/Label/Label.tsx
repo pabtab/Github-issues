@@ -2,8 +2,8 @@ import React from 'react';
 import './styles.css';
 
 type LabelProps = {
-  color?: String;
-  children: String;
+  color?: string;
+  children: string;
 }
 
 const Label = ({ color = '#0000ff', children }: LabelProps) => {

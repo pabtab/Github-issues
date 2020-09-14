@@ -1,17 +1,7 @@
 import React from 'react';
 import { List as ListSemantic } from 'semantic-ui-react';
 import { Label } from '../../Atoms/Label';
-
-type TLabel = {
-  title: String;
-  color: String;
-  id: Number;
-};
-
-type Item = {
-  title: String;
-  labels: Array<TLabel>;
-};
+import { Item } from '../../types/types';
 
 type ListProps = {
   data: Array<Item>;
@@ -24,9 +14,9 @@ const List = ({ data = [] }: ListProps) => {
         <ListSemantic.Item>
           <ListSemantic.Content>
             <ListSemantic.Header>{item.title}</ListSemantic.Header>
-            {item.labels.map(({ title, color, id }) => (
+            {item.labels.map(({ name, color, id }) => (
               <Label color={color} key={id.toString()}>
-                {title}
+                {name}
               </Label>
             ))}
           </ListSemantic.Content>

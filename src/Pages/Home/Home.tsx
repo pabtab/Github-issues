@@ -5,11 +5,12 @@ import { fetchIssues } from '../../store/issues/actions';
 import { searchIssue, selectResultItem } from '../../store/search/actions';
 import { getResult, getIssues } from '../../store/selectors';
 import { SearchAutocomplete } from '../../Molecules/SearchAutocomplete';
+import { Item } from '../../types/types';
 
 import './styles.css';
 
 interface IResult {
-  result: Object
+  result: Item
 }
 
 const Home = () => {
@@ -32,7 +33,7 @@ const Home = () => {
     e: React.FormEventHandler<HTMLInputElement>,
     data: IResult
   ) => {
-    dispatch(selectResultItem(data.result))
+    dispatch(selectResultItem(data.result.title))
   };
 
   return (

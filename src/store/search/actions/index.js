@@ -19,5 +19,9 @@ export const searchIssue = createAction('SEARCH/RESULT', (value, data) => {
 
 export const selectResultItem = createAction(
   'SEARCH/SELECT-RESULT',
-  (selection) => selection
+  (selection) => {
+    return {
+      payload: selection
+    }
+  }
 );
