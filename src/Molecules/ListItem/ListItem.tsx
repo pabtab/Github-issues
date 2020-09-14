@@ -4,12 +4,12 @@ import { Item } from '../../types/types';
 
 const ListItem = ({ title, labels, id }: Item) => {
   return (
-    <div key={id.toString()} className="Item">
+    <div key={id.toString()} className="Item" data-test="list-item">
       <h3>{title}</h3>
       <span className="labels">
         {
           labels.map(label => (
-            <Label key={label.id} color={label.color}>{label.name}</Label>
+            <Label key={label.id.toString()} color={label.color}>{label.name}</Label>
           ))
         }
       </span>
