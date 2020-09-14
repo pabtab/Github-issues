@@ -7,8 +7,6 @@ export const searchIssue = createAction('SEARCH/RESULT', (value, data) => {
     (issue) => issue.title.toLowerCase().slice(0, wordLength) === cleanWord
   );
 
-  console.log(result);
-
   return {
     payload: {
       result,
