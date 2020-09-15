@@ -2,10 +2,20 @@
   max-height: 400px;
   overflow-y: scroll;
   margin: 0 auto;
-  width: 600px;
+  width: 85%;
   position: initial;
 }
 
 .ui.input {
-  width: 600px;
+  width: 85%;
+}
+
+@media only screen and (min-width: 600px) {
+  .ui.search.search--autocomplete > .results {
+    width: 600px;
+  }
+  
+  .ui.input {
+    width: 600px;
+  }
 }

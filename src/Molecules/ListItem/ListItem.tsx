@@ -2,6 +2,8 @@ import React from 'react';
 import { Label } from '../../Atoms/Label';
 import { Item } from '../../types/types';
 
+import './styles.css'
+
 const ListItem = ({ title, labels, id }: Item) => {
   return (
     <div key={id.toString()} className="Item" data-test="list-item">
